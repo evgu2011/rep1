@@ -7,10 +7,13 @@ jobs:
   say-hello:
     runs-on: ubuntu-latest
     steps:
-      - name: Step_1:Clone+Checkout repository
+      - name: Step_1:Clone+Checkout the repo to runner
         uses: actions/checkout@v4
 
-      - name: Step_2:run script # Name:Say Hello
+      - name: Step_2:Run shell script
         run: |
+          dir
+          echo "----------------------------------"
           cat 1.txt 
+          echo "----------------------------------"
           echo "Hello, GitHub Actions!"
