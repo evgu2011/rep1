@@ -4,7 +4,7 @@ on:
   push:
     branches: [master]
 jobs:
-  say-hello:
+  test-shell-script-job:
     runs-on: ubuntu-latest
     steps:
       - name: Step_1:Clone+Checkout the repo to runner
@@ -12,8 +12,11 @@ jobs:
 
       - name: Step_2:Run shell script
         run: |
+          echo "---------------------------------- start"
+          echo "Hello!"
+          echo "---------------------------------- dir"
           dir
-          echo "----------------------------------"
+          echo "---------------------------------- content of 1.txt"
           cat 1.txt 
-          echo "----------------------------------"
-          echo "Hello, GitHub Actions!"
+          echo "---------------------------------- end"
+          
